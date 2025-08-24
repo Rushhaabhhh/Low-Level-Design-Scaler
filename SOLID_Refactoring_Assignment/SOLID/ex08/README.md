@@ -11,3 +11,8 @@ Tasks:
 - Identify the SOLID violation(s)
 - Refactor to comply with all SOLID principles
 - Keep behavior; add a tiny demo/test
+
+Fix : 
+- ISP violation : Split the Vehicle interface into smaller, specific interfaces.
+
+
