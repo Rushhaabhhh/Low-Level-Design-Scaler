@@ -4,7 +4,7 @@ public class Demo01 {
         TaxCalculator taxCalculator = new StandardTaxCalculator();
         OrderRepository orderRepository = new DataOrderRepository();
         
-        OrderService orderService = new OrderService(emailService, taxCalculator, orderRepository);
+        OrderService orderService = new OrderService();
         orderService.checkout("abc@shop.com", 100.0);
     }
 }
