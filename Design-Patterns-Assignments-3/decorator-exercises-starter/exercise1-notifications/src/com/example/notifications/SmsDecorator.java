@@ -1,0 +1,20 @@
+package com.example.notifications;
+
+public class SmsDecorator extends NotifierDecorator {
+    private final String phoneNumber;
+
+    public SmsDecorator(Notifier notifier, String phoneNumber) {
+        super(notifier);
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public void notify(String text) {
+        sendSms(text);
+        super.notify(text);
+    }
+
+    private void sendSms(String text) {
+        System.out.println("[SMS -> " + phoneNumber + "]: " + text);
+    }
+}
